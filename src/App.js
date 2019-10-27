@@ -9,6 +9,7 @@ import SignInAndSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.com
 import Header from './components/header/header.component'
 import {auth, createUserProfileDocument} from './firebase/firebase-util';
 
+
 class App extends React.Component {
 
   constructor(){
@@ -30,7 +31,7 @@ class App extends React.Component {
           this.setState({currentUser: {
             id: snapShot.id,
             ...snapShot.data()
-          }}, () => console.log(this.state));
+          }});
         })
 
       }else {
